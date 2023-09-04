@@ -1,0 +1,541 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    font-size: 30px;
+    font-weight: 60;
+    font-family: 'Roboto', sans-serif;
+    color: #b393d3;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px #957dad,
+                 1px 2px 0px #957dad,
+                 1px 3px 0px #957dad,
+                 1px 4px 0px #957dad,
+                 1px 5px 0px #957dad,
+                 1px 6px 0px #957dad,
+                 1px 10px 5px rgba(16, 16, 16, 0.5),
+                 1px 15px 10px rgba(16, 16, 16, 0.4),
+                 1px 20px 30px rgba(16, 16, 16, 0.3),
+                 1px 25px 50px rgba(16, 16, 16, 0.2);
+  
+      text-align: center;
+    color: white;
+    text-align: center;
+ 
+    transition: background-color 0.5s ease;
+}
+
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+ul, li {
+    list-style: none;
+    padding: 0;
+}
+
+#room-list {
+    margin-top: 20px;
+}
+
+#room-list li {
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+
+#book-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.5s ease, transform 0.2s ease;
+}
+
+#book-button:active {
+    transform: scale(0.95);
+}
+
+#book-button:hover {
+    background-color: #0056b3;
+}
+
+
+.booking-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.booking-container button {
+    background-color: #ff0033;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.2s ease;
+    margin-left: auto;
+}
+
+.booking-container button:hover {
+    background-color: #00fff7;
+}
+
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: left;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #ff0062;
+}
+
+
+#home {
+    background-color: #f4f4f4; 
+    padding: 20px;
+    text-align: center;
+}
+
+#home h2 {
+    font-size: 24px;
+    color: #333; 
+    margin-bottom: 10px;
+}
+
+#home p {
+    font-size: 18px;
+    color: #666; 
+}
+
+
+#booking-form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+input[type="datetime-local"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+input[type="datetime-local"]:hover,
+select:hover {
+    background-color: #e0e0e0;
+}
+
+button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#booking-form {
+    animation: fadeIn 0.5s ease;
+}
+
+
+#property-images {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#property-images img {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+    margin-right: 10px;
+    text-align: center;
+}
+
+
+img {
+    width: 200px; 
+    height: 150px;
+    margin: 10px; 
+    padding: 5px; 
+    transition: filter 0.3s ease;
+}
+
+
+img:hover {
+    filter: blur(5px); 
+}
+
+.image-container {
+  position: relative;
+  margin: 10px; 
+  display: inline-block; 
+}
+
+
+.nav-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.image-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: white; 
+  padding: 5px 10px; 
+  font-size: 14px; 
+}
+
+
+
+
+
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #555;
+    --heading-font-size: 24px;
+    --text-font-size: 18px;
+}
+
+
+#about {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+
+#about h2 {
+    font-size: 50px;
+    font-weight: 600;
+    background-image: conic-gradient(#553c9a 30%, #ee4b2b 40%, #ee4b2b 70%, #00c2cb 80%, #553c9a);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+
+#about h3:nth-of-type(1) {
+    font-size: var(--heading-font-size);
+    color: var(--primary-color);
+    margin-top: 20px;
+    text-align: center;
+}
+#about p:nth-of-type(1) {
+    font-size: var(--text-font-size);
+    color: var(--secondary-color);
+    line-height: 1.6;
+    text-align: center;
+}
+#about p:nth-of-type(2) {
+    font-size: var(--text-font-size);
+    color: var(--secondary-color);
+    line-height: 1.6;
+    text-align: center;
+}
+
+#about h3:nth-of-type(2) {
+    font-size: var(--heading-font-size);
+    color: var(--primary-color);
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+#about ul {
+    list-style-type: none; 
+    padding: 0;
+    text-align: center;
+  }
+  
+
+  li {
+    margin-bottom: 10px; 
+    font-size: 16px; 
+    color: #333; 
+  }
+  
+
+  li:hover {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    transition: background-color 0.3s, border 0.3s;
+  }
+  
+
+  li {
+    margin-bottom: 10px; 
+    font-size: 16px; 
+    color: #010509; 
+    font-weight: bold; 
+  }
+  
+#about ul li:before {
+    content: '\2022'; 
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+#about h3:nth-of-type(3) {
+    font-size: var(--heading-font-size);
+    color: var(--primary-color);
+    margin-top: 30px;
+    text-align: center;
+}
+#about p:nth-of-type(3) {
+    font-size: var(--text-font-size);
+    color: var(--secondary-color);
+    line-height: 1.6;
+    text-align: center;
+}
+
+#about p:nth-of-type(4) {
+    font-size: var(--text-font-size);
+    color: var(--secondary-color);
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+#about h3:nth-of-type(4) {
+    font-size: var(--heading-font-size);
+    color: var(--primary-color);
+    margin-top: 30px;
+    text-align: center;
+}
+
+#about a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#about a:hover {
+    color: #0056b3;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    #about h2 {
+        font-size: 28px;
+
+    }
+    
+
+}
+
+
+#goto-property-button {
+    position: relative;
+    border: none;
+    font-size: 18px;
+    transition: color 0.5s, transform 0.2s, background-color 0.2s;
+    outline: none;
+    border-radius: 3px;
+    margin: 0 10px;
+    padding: 23px 33px;
+    border: 3px solid transparent;
+    
+  
+}
+
+#goto-property-button:hover {
+    background-color: #2980b9;
+}
+
+
+#contact {
+    display: block;
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  #contact h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+
+  #contact p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+  }
+  
+
+  .contact-info {
+    margin-top: 20px;
+  }
+  
+
+  .contact-info p {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
+
+  .contact-form {
+    margin-top: 30px;
+  }
+  
+
+  .contact-form h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+
+  .form-group label {
+    font-size: 18px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+
+  button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  

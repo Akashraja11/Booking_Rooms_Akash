@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Meeting Room Booking</title>
+</head>
+<body>
+    <header>
+        <h1>Meeting Room Booking</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" id="home-nav">Home</a></li>
+                <li><a href="#property" id="property-nav">Property</a></li>
+                <li><a href="#about" id="about-nav">About</a></li>
+                <li><a href="#contact" id="contact-nav">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="background-image">
+           
+        </section>
+
+        <section id="property-images" style="display: block;">
+            <div class="image-container">
+                <img src="pic1.jpg" alt="Image 1" class="nav-image" data-section="section1">
+                <div class="image-text">Hotel Green palace</div>
+            </div>
+            <div class="image-container">
+                <img src="pic2.jpg" alt="Image 2" class="nav-image" data-section="section2">
+                <div class="image-text">Taj coromandal</div>
+            </div>
+            <div class="image-container">
+                <img src="pic3.jpg" alt="Image 3" class="nav-image" data-section="section3">
+                <div class="image-text">ITC grand Chola</div>
+            </div>
+            <div class="image-container">
+                <img src="pic4.jpg" alt="Image 4" class="nav-image" data-section="section4">
+                <div class="image-text">hyatt Regency</div>
+            </div>
+        </section>
+        
+
+        <section id="section1" style="display: none;">
+           
+            <h2>Welcome to Property 1</h2>
+            <p>This is Property 1's unique content.</p>
+        </section>
+
+        <section id="section2" style="display: none;">
+          
+            <h2>Welcome to Property 2</h2>
+            <p>This is Property 2's unique content.</p>
+        </section>
+
+        <section id="section3" style="display: none;">
+         
+            <h2>Welcome to Property 3</h2>
+            <p>This is Property 3's unique content.</p>
+        </section>
+
+        <section id="section4" style="display: none;">
+          
+            <h2>Welcome to Property 4</h2>
+            <p>This is Property 4's unique content.</p>
+        </section>
+
+        <section id="home" style="display:none;">
+          
+            <h2>Welcome to our Meeting Room Booking System</h2>
+            <button id="goto-property-button">Book Now</button>
+        </section>
+        
+        
+        <section id="about" style="display: none;">
+            <h2>About Us</h2>
+            <p>Welcome to Meeting Room Booking, where we make scheduling and managing meeting rooms easy and efficient. Our team is dedicated to providing you with the best solutions for your meeting room needs.</p>
+            
+            <h3>Our Mission</h3>
+            <p>Our mission is to simplify the process of booking meeting rooms, ensuring that you can focus on what matters most – productive meetings and collaboration.</p>
+            
+            <h3>Why Choose Us?</h3>
+            <p>We understand that finding the right meeting space is crucial for the success of your business. Here's why you should choose us:</p>
+            <ul>
+                <li>Easy-to-use online booking system</li>
+                <li>A variety of well-equipped meeting rooms</li>
+                <li>Flexible booking options</li>
+                <li>Competitive pricing</li>
+                <li>Exceptional customer support</li>
+            </ul>
+            
+            <h3>Our Team</h3>
+            <p>We have a dedicated team of professionals who are passionate about providing the best meeting room booking experience. Meet our team members who work tirelessly to make your booking process seamless.</p>
+        </section>
+
+        <section id="contact" style="display: none;">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or feedback, please don't hesitate to contact us. We value your input and are here to assist you with any inquiries.</p>
+            
+            <div class="contact-info">
+                <p>Email: <a href="mailto:info@example.com">bookroom11@example.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+            </div>
+
+            <div class="contact-form">
+                <h3>Contact Form</h3>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="available-rooms" style="display: none;">
+            <h2>Available Rooms</h2>
+            <ul id="room-list"></ul>
+        </section>
+
+        <section id="booking" style="display: none;">
+            <h2>Book a Room</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="room-selector">Select a Room:</label>
+                    <select id="room-selector" required></select>
+                </div>
+                <div class="form-group">
+                    <label for="booking-time">Select Date and Time:</label>
+                    <input type="datetime-local" id="booking-time" required>
+                </div>
+                <button type="submit" id="book-button">Book</button>
+            </form>
+        </section>
+
+        <section id="view-bookings" style="display: none;">
+            <h2>Your Bookings</h2>
+            <ul id="booking-list"></ul>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
